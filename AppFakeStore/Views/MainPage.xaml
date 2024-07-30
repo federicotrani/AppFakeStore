@@ -58,7 +58,6 @@
                     </Button.ImageSource>
                 </Button>
 
-
             </Grid>            
         </VerticalStackLayout>
     </ScrollView>
