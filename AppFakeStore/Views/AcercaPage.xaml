@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppFakeStore.Views.AcercaPage"
+             xmlns:models="clr-namespace:AppFakeStore.Models"
              Title="AcercaPage">
     <VerticalStackLayout>
         <Image Source="dotnet_bot.png" />
@@ -9,5 +10,30 @@
             Text="Datos del Programador"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Border StrokeShape="RoundRectangle 5" WidthRequest="100" BackgroundColor="Azure">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnCounterClicked"/>
+            </Border.GestureRecognizers>
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Label 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    FontSize="Large" 
+                    TextColor="Red" 
+                    Text="{x:Static models:MaterialIcons.Mail}" 
+                    FontFamily="MaterialDesignIcons"/>
+                <Label  
+                    x:Name="CounterBtn"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Text="Contacto"/>
+            </VerticalStackLayout>
+        </Border>
+        <Button x:Name="IconBtn" Text="Click me" Clicked="IconBtn_Clicked" WidthRequest="150">
+            <Button.ImageSource>
+                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xe158;" />
+            </Button.ImageSource>
+        </Button>
     </VerticalStackLayout>
 </ContentPage>

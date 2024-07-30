@@ -21,6 +21,5 @@ public partial class ProductoDetalleViewModel : BaseViewModel
         await Application.Current.MainPage.Navigation.PopAsync();
     }
 
-    [ObservableProperty]
-    string ratingIcon = MaterialDesignIconsFont.Star;
+    
 }
